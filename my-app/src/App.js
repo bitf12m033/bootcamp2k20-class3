@@ -1,9 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
 
-function App(props) {
+function App({name , con, age}) {
     return (
-      <div>Hello From {props.name}</div>
+      <div>Hello From {name} , from {con} , age {age}</div>
     );
 }
 
