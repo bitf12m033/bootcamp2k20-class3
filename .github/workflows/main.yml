@@ -6,9 +6,9 @@ name: Deploy Website
 # events but only for the master branch
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   #pull_request:
-    #branches: [ main ]
+    #branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -30,4 +30,4 @@ jobs:
     - name: Install Surge
       run: npm install -g surge
     - name: Run Surge
-      run: surge ./my-app bitf12m033-bc20-class3.surge.sh --token ${{secrets.SURGE_TOKEN}}
+      run: surge ./my-app/build bitf12m033-bc20-class3.surge.sh --token ${{secrets.SURGE_TOKEN}}
