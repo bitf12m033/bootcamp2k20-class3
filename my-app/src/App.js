@@ -6,7 +6,7 @@ function App({name , con, age}) {
       <div>
         <p>
 
-        Hello From {name} , from {con} , age {age}
+        Hello From {name} , from {con} age {age}
         </p>
         <Hello/>
       </div>
