@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render( <App name="Umer"/>,
+ReactDOM.render( <App name="Umer" con="Pakistan" age={25-10}/>,
     document.getElementById('root')
 );
 
