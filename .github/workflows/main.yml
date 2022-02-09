@@ -27,7 +27,13 @@ jobs:
       uses: actions/setup-node@v2-beta
       with:
         node-version: 16
+    - uses: borales/actions-yarn@v2.0.0
+      with:
+        cmd: install # will run `yarn install` command      
+
+    - name: Build React App
+      run: cd "my-app" && yarn build
     - name: Install Surge
       run: npm install -g surge
     - name: Run Surge
-      run: surge ./my-app/build bitf12m033-bc20-class3.surge.sh --token ${{secrets.SURGE_TOKEN}}
+      run: surge my-app/build bitf12m033-bc20-class3.surge.sh --token ${{secrets.SURGE_TOKEN}}
