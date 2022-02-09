@@ -32,8 +32,8 @@ jobs:
         cmd: install # will run `yarn install` command      
 
     - name: Build React App
-      run: cd "my-app" && yarn build
+      run:  yarn build
     - name: Install Surge
       run: npm install -g surge
     - name: Run Surge
-      run: surge my-app/build bitf12m033-bc20-class3.surge.sh --token ${{secrets.SURGE_TOKEN}}
+      run: surge ./build bitf12m033-bc20-class3.surge.sh --token ${{secrets.SURGE_TOKEN}}
